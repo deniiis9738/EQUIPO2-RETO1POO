@@ -1,6 +1,6 @@
 package Documents;
 
-import PROYECTOANTIGUO.Categorias;
+import PROYECTOANTIGUO.Category;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Read_Category extends Read_csv{
-    public static ArrayList<Categorias> categorias = new ArrayList<>();
+    public static ArrayList<Category> categories = new ArrayList<>();
 
 
     public static void leer() throws IOException {
@@ -22,7 +22,7 @@ public class Read_Category extends Read_csv{
         String linea = flujoEntrada.readLine();
         while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
             String[] categoriaArray = linea.split(";");
-            categorias.add(new Categorias(categoriaArray[0]));
+            categories.add(new Category(categoriaArray[0]));
             linea = flujoEntrada.readLine();
         }
     }

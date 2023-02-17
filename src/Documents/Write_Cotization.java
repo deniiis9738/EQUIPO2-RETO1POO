@@ -8,11 +8,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Read_Cotization extends Read_csv{
+public class Write_Cotization extends Write_csv {
+
     public static ArrayList<Cotization> cotization = new ArrayList<>();
 
+    public static void guardar() throws IOException {
 
-    public static void leer() throws IOException {
+
         miFichero = new File("./src/Csv/Cotizacion.csv");
         if (!miFichero.exists()) {
             System.out.println("El fichero no existe");
@@ -24,5 +26,10 @@ public class Read_Cotization extends Read_csv{
             cotization.add(new Cotization(Integer.parseInt(salarioArray[0]), Integer.parseInt(salarioArray[1])));
             linea = flujoEntrada.readLine();
         }
+
+
+
     }
+
+
 }

@@ -1,9 +1,9 @@
 package PROYECTOANTIGUO;
 
-public class Categorias {
+public class Category {
     public String categoria;
 
-    public Categorias(String categoria) {
+    public Category(String categoria) {
         this.categoria = categoria;
 
     }

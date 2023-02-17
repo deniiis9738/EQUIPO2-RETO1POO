@@ -1,6 +1,6 @@
 package PROYECTOANTIGUO;
 
-public class Empleados {
+public class Empleoyee {
 
     public int idDep;
     public String NIF;
@@ -14,7 +14,7 @@ public class Empleados {
     public int gCotizacion;
     public String email;
 
-    public Empleados(String NIF, String nombre, String apellido1, String apellido2, String cuenta, String antiguedad, String nASeguridadSocial, String catGProfesional, int gCotizacion, String email, int idDep) {
+    public Empleoyee(String NIF, String nombre, String apellido1, String apellido2, String cuenta, String antiguedad, String nASeguridadSocial, String catGProfesional, int gCotizacion, String email, int idDep) {
         this.idDep = idDep;
         this.NIF = NIF;
         this.nombre = nombre;

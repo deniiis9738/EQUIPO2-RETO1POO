@@ -40,11 +40,11 @@ public class Reto1 {
     public static int identificador;
     public static String id;
     public static int opcion;
-    public static ArrayList<Empleados> empleados = new ArrayList<>();
-    public static ArrayList<Empleados> auxE = new ArrayList<>();
-    public static ArrayList<Horas> horas = new ArrayList<>();
-    public static ArrayList<Salario> salarios = new ArrayList<>();
-    public static ArrayList<Categorias> categorias = new ArrayList<>();
+    public static ArrayList<Empleoyee> empleados = new ArrayList<>();
+    public static ArrayList<Empleoyee> auxE = new ArrayList<>();
+    public static ArrayList<Hours> horas = new ArrayList<>();
+    public static ArrayList<Cotization> cotizations = new ArrayList<>();
+    public static ArrayList<Category> categorias = new ArrayList<>();
     public static int[] cantECod = new int[7];
     public static int[] cantE = new int[29];
     public static int[] cantG = new int[7];
@@ -82,7 +82,7 @@ public class Reto1 {
         String linea = flujoEntrada.readLine();
         while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
             String[] empleadoArray = linea.split(";");
-            empleados.add(new Empleados(empleadoArray[0], empleadoArray[1], empleadoArray[2], empleadoArray[3], empleadoArray[4], empleadoArray[5], empleadoArray[6], empleadoArray[7], Integer.parseInt(empleadoArray[8]), empleadoArray[9], Integer.parseInt(empleadoArray[10])));
+            empleados.add(new Empleoyee(empleadoArray[0], empleadoArray[1], empleadoArray[2], empleadoArray[3], empleadoArray[4], empleadoArray[5], empleadoArray[6], empleadoArray[7], Integer.parseInt(empleadoArray[8]), empleadoArray[9], Integer.parseInt(empleadoArray[10])));
             linea = flujoEntrada.readLine();
         }
     }
@@ -123,7 +123,7 @@ public class Reto1 {
         String linea = flujoEntrada.readLine();
         while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
             String[] categoriaArray = linea.split(";");
-            categorias.add(new Categorias(categoriaArray[0]));
+            categorias.add(new Category(categoriaArray[0]));
             linea = flujoEntrada.readLine();
         }
     }
@@ -139,11 +139,11 @@ public class Reto1 {
         menuConsultarEmpleado();
 
 
-        for (Empleados empleados1 : empleados) {
+        for (Empleoyee empleoyee1 : empleados) {
 
-            if (empleados1.getNIF().equals(id)) {
+            if (empleoyee1.getNIF().equals(id)) {
 
-                printeoConsultarEmpleados(empleados1);
+                printeoConsultarEmpleados(empleoyee1);
 
             }
         }
@@ -152,20 +152,20 @@ public class Reto1 {
 
     /**
      * El metodo printea la busqueda de consultarEmpleado()
-     * @param empleados1
+     * @param empleoyee1
      */
-    private static void printeoConsultarEmpleados(Empleados empleados1) {
+    private static void printeoConsultarEmpleados(Empleoyee empleoyee1) {
         System.out.printf("%-15s%-15s%-15s%-15s%-15s%-15s%-19s%-24s%-17s%-15s\n",
-                empleados1.getNIF(),
-                empleados1.getNombre(),
-                empleados1.getApellido1(),
-                empleados1.getApellido2(),
-                empleados1.getCuenta(),
-                empleados1.getAntiguedad(),
-                empleados1.getNASeguridadSocial(),
-                empleados1.getCatGProfesional(),
-                empleados1.getGCotizacion(),
-                empleados1.getIdDep());
+                empleoyee1.getNIF(),
+                empleoyee1.getNombre(),
+                empleoyee1.getApellido1(),
+                empleoyee1.getApellido2(),
+                empleoyee1.getCuenta(),
+                empleoyee1.getAntiguedad(),
+                empleoyee1.getNASeguridadSocial(),
+                empleoyee1.getCatGProfesional(),
+                empleoyee1.getGCotizacion(),
+                empleoyee1.getIdDep());
     }
 
     /**
@@ -205,11 +205,11 @@ public class Reto1 {
 
         menuConsultarDepartamentos();
 
-        for (Empleados empleados1 : empleados) {
+        for (Empleoyee empleoyee1 : empleados) {
 
-            if (empleados1.getIdDep() == identificador) {
+            if (empleoyee1.getIdDep() == identificador) {
 
-                printeoEmpleadosDepartamentos(empleados1);
+                printeoEmpleadosDepartamentos(empleoyee1);
 
             }
         }
@@ -218,20 +218,20 @@ public class Reto1 {
 
     /**
      * EL metodo printea la informacion de consultarEmpleadosDepartamentos()
-     * @param empleados1
+     * @param empleoyee1
      */
-    private static void printeoEmpleadosDepartamentos(Empleados empleados1) {
+    private static void printeoEmpleadosDepartamentos(Empleoyee empleoyee1) {
         System.out.printf("%-15s%-15s%-15s%-15s%-15s%-15s%-19s%-24s%-17s%-15s\n",
-                empleados1.getNIF(),
-                empleados1.getNombre(),
-                empleados1.getApellido1(),
-                empleados1.getApellido2(),
-                empleados1.getCuenta(),
-                empleados1.getAntiguedad(),
-                empleados1.getNASeguridadSocial(),
-                empleados1.getCatGProfesional(),
-                empleados1.getGCotizacion(),
-                empleados1.getIdDep());
+                empleoyee1.getNIF(),
+                empleoyee1.getNombre(),
+                empleoyee1.getApellido1(),
+                empleoyee1.getApellido2(),
+                empleoyee1.getCuenta(),
+                empleoyee1.getAntiguedad(),
+                empleoyee1.getNASeguridadSocial(),
+                empleoyee1.getCatGProfesional(),
+                empleoyee1.getGCotizacion(),
+                empleoyee1.getIdDep());
     }
 
     /**
@@ -282,9 +282,9 @@ public class Reto1 {
 
         for (Department department1 : departamentos) {
 
-            for (Empleados empleados1 : empleados) {
+            for (Empleoyee empleoyee1 : empleados) {
 
-                int idEmpleado = empleados1.getIdDep();
+                int idEmpleado = empleoyee1.getIdDep();
                 int idDepartamento = department1.getIdDep();
 
                 if (idEmpleado == idDepartamento) {
@@ -314,12 +314,12 @@ public class Reto1 {
         int contador = 0;
         int i = -1;
 
-        for (Salario salario1 : salarios) {
+        for (Cotization cotization1 : cotizations) {
             i++;
-            for (Empleados empleados1 : empleados) {
+            for (Empleoyee empleoyee1 : empleados) {
 
-                int Gcotizacion = empleados1.getGCotizacion();
-                int NGCotizacion = salario1.getGCot();
+                int Gcotizacion = empleoyee1.getGCotizacion();
+                int NGCotizacion = cotization1.getGCot();
 
                 if (Gcotizacion == NGCotizacion) {
                     contador++;
@@ -360,21 +360,21 @@ public class Reto1 {
                 "Id Departamento");
         System.out.println("------------------------------------------------------------------------------------------" +
                 "-----------------------------------------------------------------------------------------------------");
-        for (Empleados empleados1 : empleados) {
+        for (Empleoyee empleoyee1 : empleados) {
 
-            if (empleados1.getGCotizacion() == identificador) {
+            if (empleoyee1.getGCotizacion() == identificador) {
 
                 System.out.printf("%-15s%-15s%-15s%-15s%-15s%-15s%-19s%-24s%-17s%-15s\n",
-                        empleados1.getNIF(),
-                        empleados1.getNombre(),
-                        empleados1.getApellido1(),
-                        empleados1.getApellido2(),
-                        empleados1.getCuenta(),
-                        empleados1.getAntiguedad(),
-                        empleados1.getNASeguridadSocial(),
-                        empleados1.getCatGProfesional(),
-                        empleados1.getGCotizacion(),
-                        empleados1.getIdDep());
+                        empleoyee1.getNIF(),
+                        empleoyee1.getNombre(),
+                        empleoyee1.getApellido1(),
+                        empleoyee1.getApellido2(),
+                        empleoyee1.getCuenta(),
+                        empleoyee1.getAntiguedad(),
+                        empleoyee1.getNASeguridadSocial(),
+                        empleoyee1.getCatGProfesional(),
+                        empleoyee1.getGCotizacion(),
+                        empleoyee1.getIdDep());
 
             }
         }
@@ -410,8 +410,8 @@ public class Reto1 {
         System.out.print("Introduce el id del departamento del nuevo empleado: ");
         int idDep = inputValue.nextInt();
 
-        Empleados empleados1 = new Empleados(NIF, nombreEmpleado, apellido1Empleado, apellido2Empleado, cuentaEmpleado, antiguedad, nSS, catProf, GCot, email, idDep);
-        empleados.add(empleados1);
+        Empleoyee empleoyee1 = new Empleoyee(NIF, nombreEmpleado, apellido1Empleado, apellido2Empleado, cuentaEmpleado, antiguedad, nSS, catProf, GCot, email, idDep);
+        empleados.add(empleoyee1);
     }
 
 
@@ -498,10 +498,10 @@ public class Reto1 {
             System.out.println("El fichero no existe");
         }
         BufferedWriter flujoSalida = new BufferedWriter(new FileWriter(miFichero));
-        for (int i = 0; i < salarios.size(); i++) {
-            flujoSalida.write(String.valueOf(salarios.get(i).getGCot()));
+        for (int i = 0; i < cotizations.size(); i++) {
+            flujoSalida.write(String.valueOf(cotizations.get(i).getGCot()));
             flujoSalida.write(";");
-            flujoSalida.write(String.valueOf(salarios.get(i).getDinero()));
+            flujoSalida.write(String.valueOf(cotizations.get(i).getDinero()));
             flujoSalida.write("\n");
         }
         flujoSalida.close();
@@ -584,107 +584,107 @@ public class Reto1 {
 
         System.out.println();
         int i = -1;
-        for (Empleados empleados1 : empleados) {
+        for (Empleoyee empleoyee1 : empleados) {
             i++;
-            if (empleados1.getNIF().equals(empleado)) {
-                mostrarDatosEmpleado(empleados1);
-                preguntaModificaDatos(empleados1);
+            if (empleoyee1.getNIF().equals(empleado)) {
+                mostrarDatosEmpleado(empleoyee1);
+                preguntaModificaDatos(empleoyee1);
 
                 switch (identificador) {
                     case 1:
                         System.out.println("Introduce el nuevo NIF del empleado: ");
                         String NIF = inputValue.next();
-                        empleados1 = new Empleados(NIF, empleados1.getNombre(), empleados1.getApellido1(), empleados1.getApellido2(), empleados1.getCuenta(),
-                                empleados1.getAntiguedad(), empleados1.getNASeguridadSocial(), empleados1.getCatGProfesional(), empleados1.getGCotizacion(), empleados1.getEmail(),
-                                empleados1.getIdDep());
-                        empleados.set(i, empleados1);
+                        empleoyee1 = new Empleoyee(NIF, empleoyee1.getNombre(), empleoyee1.getApellido1(), empleoyee1.getApellido2(), empleoyee1.getCuenta(),
+                                empleoyee1.getAntiguedad(), empleoyee1.getNASeguridadSocial(), empleoyee1.getCatGProfesional(), empleoyee1.getGCotizacion(), empleoyee1.getEmail(),
+                                empleoyee1.getIdDep());
+                        empleados.set(i, empleoyee1);
                         break;
                     case 2:
                         System.out.println("Introduce el nuevo nombre del empleado: ");
                         String nombre = inputValue.next();
-                        empleados1 = new Empleados(empleados1.getNIF(), nombre, empleados1.getApellido1(), empleados1.getApellido2(), empleados1.getCuenta(),
-                                empleados1.getAntiguedad(), empleados1.getNASeguridadSocial(), empleados1.getCatGProfesional(), empleados1.getGCotizacion(), empleados1.getEmail(),
-                                empleados1.getIdDep());
-                        empleados.set(i, empleados1);
+                        empleoyee1 = new Empleoyee(empleoyee1.getNIF(), nombre, empleoyee1.getApellido1(), empleoyee1.getApellido2(), empleoyee1.getCuenta(),
+                                empleoyee1.getAntiguedad(), empleoyee1.getNASeguridadSocial(), empleoyee1.getCatGProfesional(), empleoyee1.getGCotizacion(), empleoyee1.getEmail(),
+                                empleoyee1.getIdDep());
+                        empleados.set(i, empleoyee1);
                         break;
                     case 3:
                         System.out.println("Introduce el nuevo apellido1 del empleado: ");
                         String apellido1 = inputValue.next();
-                        empleados1 = new Empleados(empleados1.getApellido1(), empleados1.getNombre(), apellido1, empleados1.getApellido2(), empleados1.getCuenta(),
-                                empleados1.getAntiguedad(), empleados1.getNASeguridadSocial(), empleados1.getCatGProfesional(), empleados1.getGCotizacion(), empleados1.getEmail(),
-                                empleados1.getIdDep());
-                        empleados.set(i, empleados1);
+                        empleoyee1 = new Empleoyee(empleoyee1.getApellido1(), empleoyee1.getNombre(), apellido1, empleoyee1.getApellido2(), empleoyee1.getCuenta(),
+                                empleoyee1.getAntiguedad(), empleoyee1.getNASeguridadSocial(), empleoyee1.getCatGProfesional(), empleoyee1.getGCotizacion(), empleoyee1.getEmail(),
+                                empleoyee1.getIdDep());
+                        empleados.set(i, empleoyee1);
                         break;
                     case 4:
                         System.out.println("Introduce el nuevo apellido2 del empleado: ");
                         String apellido2 = inputValue.next();
-                        empleados1 = new Empleados(empleados1.getNIF(), empleados1.getNombre(), empleados1.getApellido1(), apellido2, empleados1.getCuenta(),
-                                empleados1.getAntiguedad(), empleados1.getNASeguridadSocial(), empleados1.getCatGProfesional(), empleados1.getGCotizacion(), empleados1.getEmail(),
-                                empleados1.getIdDep());
-                        empleados.set(i, empleados1);
+                        empleoyee1 = new Empleoyee(empleoyee1.getNIF(), empleoyee1.getNombre(), empleoyee1.getApellido1(), apellido2, empleoyee1.getCuenta(),
+                                empleoyee1.getAntiguedad(), empleoyee1.getNASeguridadSocial(), empleoyee1.getCatGProfesional(), empleoyee1.getGCotizacion(), empleoyee1.getEmail(),
+                                empleoyee1.getIdDep());
+                        empleados.set(i, empleoyee1);
                         break;
                     case 5:
                         System.out.println("Introduce la nueva cuenta del empleado: ");
                         String cuenta = inputValue.next();
-                        empleados1 = new Empleados(empleados1.getNIF(), empleados1.getNombre(), empleados1.getApellido1(), empleados1.getApellido2(), cuenta,
-                                empleados1.getAntiguedad(), empleados1.getNASeguridadSocial(), empleados1.getCatGProfesional(), empleados1.getGCotizacion(), empleados1.getEmail(),
-                                empleados1.getIdDep());
-                        empleados.set(i, empleados1);
+                        empleoyee1 = new Empleoyee(empleoyee1.getNIF(), empleoyee1.getNombre(), empleoyee1.getApellido1(), empleoyee1.getApellido2(), cuenta,
+                                empleoyee1.getAntiguedad(), empleoyee1.getNASeguridadSocial(), empleoyee1.getCatGProfesional(), empleoyee1.getGCotizacion(), empleoyee1.getEmail(),
+                                empleoyee1.getIdDep());
+                        empleados.set(i, empleoyee1);
                         break;
                     case 6:
                         System.out.println("Introduce la anitgüedad del empleado: ");
                         String antiguedad = inputValue.next();
-                        empleados1 = new Empleados(empleados1.getNIF(), empleados1.getNombre(), empleados1.getApellido1(), empleados1.getApellido2(), empleados1.getCuenta(),
-                                antiguedad, empleados1.getNASeguridadSocial(), empleados1.getCatGProfesional(), empleados1.getGCotizacion(), empleados1.getEmail(),
-                                empleados1.getIdDep());
-                        empleados.set(i, empleados1);
+                        empleoyee1 = new Empleoyee(empleoyee1.getNIF(), empleoyee1.getNombre(), empleoyee1.getApellido1(), empleoyee1.getApellido2(), empleoyee1.getCuenta(),
+                                antiguedad, empleoyee1.getNASeguridadSocial(), empleoyee1.getCatGProfesional(), empleoyee1.getGCotizacion(), empleoyee1.getEmail(),
+                                empleoyee1.getIdDep());
+                        empleados.set(i, empleoyee1);
                         break;
                     case 7:
                         System.out.println("Introduce el nuevo n. SS del empleado: ");
                         String nSS = inputValue.next();
-                        empleados1 = new Empleados(empleados1.getNIF(), empleados1.getNombre(), empleados1.getApellido1(), empleados1.getApellido2(), empleados1.getCuenta(),
-                                empleados1.getAntiguedad(), nSS, empleados1.getCatGProfesional(), empleados1.getGCotizacion(), empleados1.getEmail(),
-                                empleados1.getIdDep());
-                        empleados.set(i, empleados1);
+                        empleoyee1 = new Empleoyee(empleoyee1.getNIF(), empleoyee1.getNombre(), empleoyee1.getApellido1(), empleoyee1.getApellido2(), empleoyee1.getCuenta(),
+                                empleoyee1.getAntiguedad(), nSS, empleoyee1.getCatGProfesional(), empleoyee1.getGCotizacion(), empleoyee1.getEmail(),
+                                empleoyee1.getIdDep());
+                        empleados.set(i, empleoyee1);
                         break;
                     case 8:
                         System.out.println("Introduce la nueva categoría progesional del empleado: ");
                         String catPro = inputValue.next();
-                        empleados1 = new Empleados(empleados1.getNIF(), empleados1.getNombre(), empleados1.getApellido1(), empleados1.getApellido2(), empleados1.getCuenta(),
-                                empleados1.getAntiguedad(), empleados1.getNASeguridadSocial(), catPro, empleados1.getGCotizacion(), empleados1.getEmail(),
-                                empleados1.getIdDep());
-                        empleados.set(i, empleados1);
+                        empleoyee1 = new Empleoyee(empleoyee1.getNIF(), empleoyee1.getNombre(), empleoyee1.getApellido1(), empleoyee1.getApellido2(), empleoyee1.getCuenta(),
+                                empleoyee1.getAntiguedad(), empleoyee1.getNASeguridadSocial(), catPro, empleoyee1.getGCotizacion(), empleoyee1.getEmail(),
+                                empleoyee1.getIdDep());
+                        empleados.set(i, empleoyee1);
                         break;
                     case 9:
                         System.out.println("Introduce el nuevo grupo de cotización del empleado: ");
                         int gCot = inputValue.nextInt();
-                        empleados1 = new Empleados(empleados1.getNIF(), empleados1.getNombre(), empleados1.getApellido1(), empleados1.getApellido2(), empleados1.getCuenta(),
-                                empleados1.getAntiguedad(), empleados1.getNASeguridadSocial(), empleados1.getCatGProfesional(), gCot, empleados1.getEmail(),
-                                empleados1.getIdDep());
-                        empleados.set(i, empleados1);
+                        empleoyee1 = new Empleoyee(empleoyee1.getNIF(), empleoyee1.getNombre(), empleoyee1.getApellido1(), empleoyee1.getApellido2(), empleoyee1.getCuenta(),
+                                empleoyee1.getAntiguedad(), empleoyee1.getNASeguridadSocial(), empleoyee1.getCatGProfesional(), gCot, empleoyee1.getEmail(),
+                                empleoyee1.getIdDep());
+                        empleados.set(i, empleoyee1);
                         break;
                     case 10:
                         System.out.println("Introduce el nuevo email del empleado: ");
                         String email = inputValue.next();
-                        empleados1 = new Empleados(empleados1.getNIF(), empleados1.getNombre(), empleados1.getApellido1(), empleados1.getApellido2(), empleados1.getCuenta(),
-                                empleados1.getAntiguedad(), empleados1.getNASeguridadSocial(), empleados1.getCatGProfesional(), empleados1.getGCotizacion(), email,
-                                empleados1.getIdDep());
-                        empleados.set(i, empleados1);
+                        empleoyee1 = new Empleoyee(empleoyee1.getNIF(), empleoyee1.getNombre(), empleoyee1.getApellido1(), empleoyee1.getApellido2(), empleoyee1.getCuenta(),
+                                empleoyee1.getAntiguedad(), empleoyee1.getNASeguridadSocial(), empleoyee1.getCatGProfesional(), empleoyee1.getGCotizacion(), email,
+                                empleoyee1.getIdDep());
+                        empleados.set(i, empleoyee1);
                         break;
                     case 11:
                         System.out.println("Introduce el nuevo id del departamento del empleado: ");
                         int idDep = inputValue.nextInt();
-                        empleados1 = new Empleados(empleados1.getNIF(), empleados1.getNombre(), empleados1.getApellido1(), empleados1.getApellido2(), empleados1.getCuenta(),
-                                empleados1.getAntiguedad(), empleados1.getNASeguridadSocial(), empleados1.getCatGProfesional(), empleados1.getGCotizacion(), empleados1.getEmail(),
+                        empleoyee1 = new Empleoyee(empleoyee1.getNIF(), empleoyee1.getNombre(), empleoyee1.getApellido1(), empleoyee1.getApellido2(), empleoyee1.getCuenta(),
+                                empleoyee1.getAntiguedad(), empleoyee1.getNASeguridadSocial(), empleoyee1.getCatGProfesional(), empleoyee1.getGCotizacion(), empleoyee1.getEmail(),
                                 idDep);
-                        empleados.set(i, empleados1);
+                        empleados.set(i, empleoyee1);
                         break;
                 }
             }
         }
     }
 
-    private static void mostrarDatosEmpleado(Empleados empleados1) {
+    private static void mostrarDatosEmpleado(Empleoyee empleoyee1) {
         System.out.printf("%-15s%-15s%-15s%-15s%-15s%-15s%-10s%-28s%-25s%-20s%-15s\n",
                 "NIF",
                 "Nombre",
@@ -700,17 +700,17 @@ public class Reto1 {
         System.out.println("------------------------------------------------------------------------------------------" +
                 "-----------------------------------------------------------------------------------------------------");
         System.out.printf("%-15s%-15s%-15s%-15s%-15s%-15s%-19s%-24s%-12s%-35s%-15s\n",
-                empleados1.getNIF(),
-                empleados1.getNombre(),
-                empleados1.getApellido1(),
-                empleados1.getApellido2(),
-                empleados1.getCuenta(),
-                empleados1.getAntiguedad(),
-                empleados1.getNASeguridadSocial(),
-                empleados1.getCatGProfesional(),
-                empleados1.getGCotizacion(),
-                empleados1.getEmail(),
-                empleados1.getIdDep());
+                empleoyee1.getNIF(),
+                empleoyee1.getNombre(),
+                empleoyee1.getApellido1(),
+                empleoyee1.getApellido2(),
+                empleoyee1.getCuenta(),
+                empleoyee1.getAntiguedad(),
+                empleoyee1.getNASeguridadSocial(),
+                empleoyee1.getCatGProfesional(),
+                empleoyee1.getGCotizacion(),
+                empleoyee1.getEmail(),
+                empleoyee1.getIdDep());
 
         System.out.println();
         System.out.println();
@@ -724,10 +724,10 @@ public class Reto1 {
 
     /**
      * @author Denis Andres Ion Badea
-     * @param empleados1 le pasamos por parámetro el empleado actual en el que queremos que se modifiquen los datos
+     * @param empleoyee1 le pasamos por parámetro el empleado actual en el que queremos que se modifiquen los datos
      * @return devuelve el número que el usuario indica para modificar los datos de ese empleado
      */
-    private static int preguntaModificaDatos(Empleados empleados1) {
+    private static int preguntaModificaDatos(Empleoyee empleoyee1) {
         System.out.println("Que datos deseas modificar?");
         System.out.println("1.- NIF");
         System.out.println("2.- Nombre");
@@ -776,7 +776,7 @@ public class Reto1 {
         String linea = flujoEntrada.readLine();
         while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
             String[] salarioArray = linea.split(";");
-            salarios.add(new Salario(Integer.parseInt(salarioArray[0]), Integer.parseInt(salarioArray[1])));
+            cotizations.add(new Cotization(Integer.parseInt(salarioArray[0]), Integer.parseInt(salarioArray[1])));
             linea = flujoEntrada.readLine();
         }
     }
@@ -795,11 +795,11 @@ public class Reto1 {
     public static void consultarSalarioDepartamento() throws IOException {
         for (Department departamento : departamentos) {
             int suma = 0;
-            for (Empleados empleado : empleados) {
+            for (Empleoyee empleado : empleados) {
                 if (empleado.getIdDep() == departamento.getIdDep()) {
-                    Salario salario = getSalarioPorGradoCotizacion(empleado.getGCotizacion());
-                    if (salario != null) {
-                        suma += salario.getDinero();
+                    Cotization cotization = getSalarioPorGradoCotizacion(empleado.getGCotizacion());
+                    if (cotization != null) {
+                        suma += cotization.getDinero();
                     }
                 }
             }
@@ -813,10 +813,10 @@ public class Reto1 {
      * @param gCotizacion el grado de cotización para el que se desea obtener el salario
      * @return el objeto Salario correspondiente al grado de cotización especificado o null si no se encuentra
      */
-    private static Salario getSalarioPorGradoCotizacion(int gCotizacion) {
-        for (Salario salario : salarios) {
-            if (salario.getGCot() == gCotizacion) {
-                return salario;
+    private static Cotization getSalarioPorGradoCotizacion(int gCotizacion) {
+        for (Cotization cotization : cotizations) {
+            if (cotization.getGCot() == gCotizacion) {
+                return cotization;
             }
         }
         return null;
@@ -833,8 +833,8 @@ public class Reto1 {
 
         int suma = 0;
         int i = 0;
-        for (Salario salario1 : salarios) {
-            suma += salario1.getDinero() * cantECod[i];
+        for (Cotization cotization1 : cotizations) {
+            suma += cotization1.getDinero() * cantECod[i];
             i++;
         }
 
@@ -859,7 +859,7 @@ public class Reto1 {
         String linea = flujoEntrada.readLine();
         while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
             String[] horasArray = linea.split(";");
-            horas.add(new Horas(horasArray[0], horasArray[1], Integer.parseInt(horasArray[2])));
+            horas.add(new Hours(horasArray[0], horasArray[1], Integer.parseInt(horasArray[2])));
             linea = flujoEntrada.readLine();
         }
     }
@@ -880,14 +880,14 @@ public class Reto1 {
         System.out.println("Introduce el departamento a consultar las horas extras: ");
         int eleccion = inputValue.nextInt();
 
-        for (Empleados empleados1 : empleados) {
-            for (Horas horas1 : horas) {
-                if (empleados1.getIdDep() == eleccion) {
-                    Empleados empleados2 = new Empleados(empleados1.getNIF(), empleados1.getNombre(), empleados1.getApellido1(), empleados1.getApellido2(), empleados1.getCuenta(),
-                            empleados1.getAntiguedad(), empleados1.getNASeguridadSocial(), empleados1.getCatGProfesional(), empleados1.getGCotizacion(), empleados1.getEmail(), empleados1.getIdDep());
-                    auxE.add(empleados2);
-                    if (empleados1.getNIF().equals(horas1.getNIF())) {
-                        horasExtras += horas1.getHoras();
+        for (Empleoyee empleoyee1 : empleados) {
+            for (Hours hours1 : horas) {
+                if (empleoyee1.getIdDep() == eleccion) {
+                    Empleoyee empleoyee2 = new Empleoyee(empleoyee1.getNIF(), empleoyee1.getNombre(), empleoyee1.getApellido1(), empleoyee1.getApellido2(), empleoyee1.getCuenta(),
+                            empleoyee1.getAntiguedad(), empleoyee1.getNASeguridadSocial(), empleoyee1.getCatGProfesional(), empleoyee1.getGCotizacion(), empleoyee1.getEmail(), empleoyee1.getIdDep());
+                    auxE.add(empleoyee2);
+                    if (empleoyee1.getNIF().equals(hours1.getNIF())) {
+                        horasExtras += hours1.getHoras();
                     }
                 }
             }
@@ -906,12 +906,12 @@ public class Reto1 {
         System.out.print("Introduce el id de la nueva categoria: ");
         String id = inputValue.next();
 
-        Categorias categorias1 = new Categorias(id);
-        categorias.add(categorias1);
+        Category category1 = new Category(id);
+        categorias.add(category1);
         System.out.println("Categoria añadida correctamente");
         System.out.println();
         System.out.println("Las categorias actuales son las siguientes: ");
-        for (Categorias catProfesionales1 : categorias) {
+        for (Category catProfesionales1 : categorias) {
             System.out.println(catProfesionales1.getCategoria());
         }
         guardarCategorias();
@@ -962,7 +962,7 @@ public class Reto1 {
             for (Department departamento : departamentos) {
                 if (departamento.getIdDep() == idDep) {
                     existe = true;
-                    for (Empleados empleado : empleados) {
+                    for (Empleoyee empleado : empleados) {
                         if (empleado.getIdDep() == departamento.getIdDep()) {
                             tieneEmpleados = true;
                             break;
@@ -1019,17 +1019,17 @@ public class Reto1 {
      */
 
     public static void deleteCategory() throws IOException {
-        Categorias selectedCategory = null;
+        Category selectedCategory = null;
         boolean hasEmployees = false;
         boolean exists = false;
 
         System.out.print("Enter the category to delete: ");
         String choice = inputValue.next();
 
-        for (Categorias category : categorias) {
+        for (Category category : categorias) {
             if (category.getCategoria().equals(choice)) {
                 exists = true;
-                for (Empleados employee : empleados) {
+                for (Empleoyee employee : empleados) {
                     if (employee.getCatGProfesional().equals(category.getCategoria())) {
                         hasEmployees = true;
                         break;

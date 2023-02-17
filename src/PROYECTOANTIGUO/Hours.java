@@ -1,12 +1,12 @@
 package PROYECTOANTIGUO;
 
-public class Horas {
+public class Hours {
 
     public String NIF;
     public String fecha;
     public int horas;
 
-    public Horas(String NIF, String fecha,int horas) {
+    public Hours(String NIF, String fecha, int horas) {
         this.NIF = NIF;
         this.fecha = fecha;
         this.horas = horas;

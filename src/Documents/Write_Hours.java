@@ -1,6 +1,6 @@
 package Documents;
 
-import PROYECTOANTIGUO.Cotization;
+import PROYECTOANTIGUO.Hours;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,21 +8,31 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Read_Cotization extends Read_csv{
-    public static ArrayList<Cotization> cotization = new ArrayList<>();
+public class Write_Hours extends Write_csv{
+
+    public static ArrayList<Hours> hours = new ArrayList<>();
+
+    public static void guardar() throws IOException {
 
 
-    public static void leer() throws IOException {
-        miFichero = new File("./src/Csv/Cotizacion.csv");
+        miFichero = new File("./src/Csv/Horas.csv");
         if (!miFichero.exists()) {
             System.out.println("El fichero no existe");
         }
         BufferedReader flujoEntrada = new BufferedReader(new FileReader(miFichero));
         String linea = flujoEntrada.readLine();
         while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
-            String[] salarioArray = linea.split(";");
-            cotization.add(new Cotization(Integer.parseInt(salarioArray[0]), Integer.parseInt(salarioArray[1])));
+            String[] horasArray = linea.split(";");
+            hours.add(new Hours(horasArray[0], horasArray[1], Integer.parseInt(horasArray[2])));
             linea = flujoEntrada.readLine();
         }
+
+
+
     }
+
+
+
+
+
 }
