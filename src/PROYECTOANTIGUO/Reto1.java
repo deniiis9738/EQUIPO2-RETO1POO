@@ -48,7 +48,7 @@ public class Reto1 {
     public static int[] cantECod = new int[7];
     public static int[] cantE = new int[29];
     public static int[] cantG = new int[7];
-    public static ArrayList<Departamentos> departamentos = new ArrayList<>();
+    public static ArrayList<Department> departamentos = new ArrayList<>();
     public static Scanner inputValue = new Scanner(System.in);
     public static File miFichero;
     /**
@@ -102,7 +102,7 @@ public class Reto1 {
         String linea = flujoEntrada.readLine();
         while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
             String[] departamentoArray = linea.split(";");
-            departamentos.add(new Departamentos(Integer.parseInt(departamentoArray[0]), departamentoArray[1]));
+            departamentos.add(new Department(Integer.parseInt(departamentoArray[0]), departamentoArray[1]));
             linea = flujoEntrada.readLine();
         }
     }
@@ -245,9 +245,9 @@ public class Reto1 {
 
         System.out.println("Nombre departamento");
 
-        for (Departamentos departamentos1 : departamentos) {
-            if (departamentos1.getIdDep() == identificador) {
-                System.out.println(departamentos1.getNombreDep());
+        for (Department department1 : departamentos) {
+            if (department1.getIdDep() == identificador) {
+                System.out.println(department1.getNombreDep());
             }
         }
         System.out.println();
@@ -280,12 +280,12 @@ public class Reto1 {
 
         int contador = 0;
 
-        for (Departamentos departamentos1 : departamentos) {
+        for (Department department1 : departamentos) {
 
             for (Empleados empleados1 : empleados) {
 
                 int idEmpleado = empleados1.getIdDep();
-                int idDepartamento = departamentos1.getIdDep();
+                int idDepartamento = department1.getIdDep();
 
                 if (idEmpleado == idDepartamento) {
                     contador++;
@@ -296,7 +296,7 @@ public class Reto1 {
             }
 
             System.out.printf("%-15s%-15s\n",
-                    departamentos1.getNombreDep(),
+                    department1.getNombreDep(),
                     contador);
 
             contador = 0;
@@ -793,7 +793,7 @@ public class Reto1 {
 
 
     public static void consultarSalarioDepartamento() throws IOException {
-        for (Departamentos departamento : departamentos) {
+        for (Department departamento : departamentos) {
             int suma = 0;
             for (Empleados empleado : empleados) {
                 if (empleado.getIdDep() == departamento.getIdDep()) {
@@ -959,7 +959,7 @@ public class Reto1 {
             System.out.print("Introduce el departamento a borrar: ");
             int idDep = inputValue.nextInt();
 
-            for (Departamentos departamento : departamentos) {
+            for (Department departamento : departamentos) {
                 if (departamento.getIdDep() == idDep) {
                     existe = true;
                     for (Empleados empleado : empleados) {

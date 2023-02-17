@@ -1,10 +1,10 @@
 package PROYECTOANTIGUO;
 
-public class Departamentos {
+public class Department {
     public int idDep;
     public String nombreDep;
 
-    public Departamentos(int idDep, String nombreDep) {
+    public Department(int idDep, String nombreDep) {
         this.idDep = idDep;
         this.nombreDep = nombreDep;
     }
