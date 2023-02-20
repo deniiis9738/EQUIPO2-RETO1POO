@@ -12,7 +12,8 @@ public class Read_Cotization extends Read_csv{
     public static ArrayList<Cotization> cotization = new ArrayList<>();
 
 
-    public static void leer() throws IOException {
+    @Override
+    public void leer() throws IOException {
         miFichero = new File("./src/Csv/Cotizacion.csv");
         if (!miFichero.exists()) {
             System.out.println("El fichero no existe");

@@ -12,7 +12,8 @@ public class Read_Category extends Read_csv{
     public static ArrayList<Category> categories = new ArrayList<>();
 
 
-    public static void leer() throws IOException {
+@Override
+    public  void leer() throws IOException {
 
         miFichero = new File("./src/Csv/CategoriasProfesionales.csv");
         if (!miFichero.exists()) {
