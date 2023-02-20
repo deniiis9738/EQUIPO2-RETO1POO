@@ -1,6 +1,6 @@
 package Documents;
 
-import PROYECTOANTIGUO.Category;
+import Contents.Category;
 
 import java.io.BufferedReader;
 import java.io.File;

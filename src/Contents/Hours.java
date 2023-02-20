@@ -1,4 +1,4 @@
-package PROYECTOANTIGUO;
+package Contents;
 
 public class Hours {
 

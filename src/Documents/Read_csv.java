@@ -9,15 +9,6 @@ public abstract class Read_csv implements Read_Write{
 
     protected static File miFichero;
 
-    public static void leer() throws IOException {
-        miFichero = new File("");
-        if (!miFichero.exists()) {
-            System.out.println("El fichero no existe");
-        }
-        BufferedReader flujoEntrada = new BufferedReader(new FileReader(miFichero));
-        String linea = flujoEntrada.readLine();
-        while (linea != null) { // Va leyendo líneas y mientras no llegue al final nos va mostrando su contenido
-        }
-    }
+    public abstract void leer() throws IOException;
 
 }

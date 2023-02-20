@@ -10,9 +10,8 @@ public interface Read_Write {
      * @version 1.0
      */
 
-    static void lerr(){}
-    static void leerArchivos() {
-    }
+    static void leer(){}
+    static void leerArchivos() {}
     static void leerEmpleados(){}
     static void leerDepartamentos(){}
     static void leerCotizacion(){}

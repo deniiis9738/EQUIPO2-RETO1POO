@@ -1,6 +1,6 @@
 package Documents;
 
-import PROYECTOANTIGUO.Cotization;
+import Contents.Cotization;
 
 import java.io.BufferedReader;
 import java.io.File;

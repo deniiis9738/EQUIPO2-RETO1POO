@@ -1,13 +1,13 @@
 package Documents;
 
-import PROYECTOANTIGUO.Empleoyee;
+import Contents.Employee;
 
 import java.io.*;
 import java.util.ArrayList;
 
 public class Write_Empleoyee extends Write_csv {
 
-    public static ArrayList<Empleoyee> empleoyee = new ArrayList<>();
+    public static ArrayList<Employee> empleoyee = new ArrayList<>();
 
     public static void guardar() throws IOException {
         //Funcion para guardar los datos en el archivo csv

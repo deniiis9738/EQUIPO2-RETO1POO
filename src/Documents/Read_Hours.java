@@ -1,6 +1,6 @@
 package Documents;
 
-import PROYECTOANTIGUO.Hours;
+import Contents.Hours;
 
 import java.io.BufferedReader;
 import java.io.File;
