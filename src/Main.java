@@ -1,8 +1,7 @@
 import Documents.Read_Empleoyee;
 import Documents.Write_Empleoyee;
 import Inquiries.InquirieEmployee;
-import Inquiries.Inquiries;
-import Modify.Add_Employee;
+import Modify.Add.Add_Employee;
 
 import java.io.IOException;
 

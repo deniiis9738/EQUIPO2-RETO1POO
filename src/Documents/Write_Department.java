@@ -10,8 +10,6 @@ import java.util.ArrayList;
 
 public class Write_Department extends Write_csv {
 
-    public static ArrayList<Department> departments = new ArrayList<>();
-
     @Override
     public  void guardar() throws IOException {
 
@@ -24,10 +22,10 @@ public class Write_Department extends Write_csv {
 
 
         BufferedWriter flujoSalida = new BufferedWriter(new FileWriter(miFichero));
-        for (int i = 0; i < departments.size(); i++) {
-            flujoSalida.write(String.valueOf(departments.get(i).getIdDep()));
+        for (int i = 0; i < Read_Department.departments.size(); i++) {
+            flujoSalida.write(String.valueOf(Read_Department.departments.get(i).getIdDep()));
             flujoSalida.write(";");
-            flujoSalida.write(departments.get(i).getNombreDep());
+            flujoSalida.write(Read_Department.departments.get(i).getNombreDep());
             flujoSalida.write("\n");
         }
         flujoSalida.close();

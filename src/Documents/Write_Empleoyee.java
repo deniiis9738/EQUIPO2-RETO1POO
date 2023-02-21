@@ -7,7 +7,6 @@ import java.util.ArrayList;
 
 public class Write_Empleoyee extends Write_csv {
 
-    public ArrayList<Employee> empleoyee = new ArrayList<>();
 
     @Override
     public void guardar() throws IOException {
@@ -23,23 +22,23 @@ public class Write_Empleoyee extends Write_csv {
             flujoSalida.write(";");
             flujoSalida.write(empleoyee.get(i).getNombre());
             flujoSalida.write(";");
-            flujoSalida.write(empleoyee.get(i).getApellido1());
+            flujoSalida.write(Read_Empleoyee.empleoyee.get(i).getApellido1());
             flujoSalida.write(";");
-            flujoSalida.write(empleoyee.get(i).getApellido2());
+            flujoSalida.write(Read_Empleoyee.empleoyee.get(i).getApellido2());
             flujoSalida.write(";");
-            flujoSalida.write(empleoyee.get(i).getCuenta());
+            flujoSalida.write(Read_Empleoyee.empleoyee.get(i).getCuenta());
             flujoSalida.write(";");
-            flujoSalida.write(empleoyee.get(i).getAntiguedad());
+            flujoSalida.write(Read_Empleoyee.empleoyee.get(i).getAntiguedad());
             flujoSalida.write(";");
-            flujoSalida.write(empleoyee.get(i).getNASeguridadSocial());
+            flujoSalida.write(Read_Empleoyee.empleoyee.get(i).getNASeguridadSocial());
             flujoSalida.write(";");
-            flujoSalida.write(empleoyee.get(i).getCatGProfesional());
+            flujoSalida.write(Read_Empleoyee.empleoyee.get(i).getCatGProfesional());
             flujoSalida.write(";");
-            flujoSalida.write(String.valueOf(empleoyee.get(i).getGCotizacion()));
+            flujoSalida.write(String.valueOf(Read_Empleoyee.empleoyee.get(i).getGCotizacion()));
             flujoSalida.write(";");
-            flujoSalida.write(empleoyee.get(i).getEmail());
+            flujoSalida.write(Read_Empleoyee.empleoyee.get(i).getEmail());
             flujoSalida.write(";");
-            flujoSalida.write(String.valueOf(empleoyee.get(i).getIdDep()));
+            flujoSalida.write(String.valueOf(Read_Empleoyee.empleoyee.get(i).getIdDep()));
             flujoSalida.write("\n");
         }
         flujoSalida.close();

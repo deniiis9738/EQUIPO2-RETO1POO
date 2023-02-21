@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public abstract class Read_csv implements Read_Write{
+public abstract class Read_csv implements
 
     protected static File miFichero;
 
