@@ -2,7 +2,6 @@ package Modify.Add;
 
 import Contents.Employee;
 import Documents.Write_Empleoyee;
-import Modify.Add.Add;
 
 import java.util.Scanner;
 
@@ -15,13 +14,13 @@ public class Add_Employee extends Add {
     @Override
     public void realizeAdd() {
         try {
-            incorporarEmpleados();
+            addEmployee();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void incorporarEmpleados() throws Exception{
+    public void addEmployee() throws Exception{
         Scanner inputValue = new Scanner(System.in);
 
         String antiguedad = "";
