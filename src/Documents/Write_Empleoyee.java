@@ -17,10 +17,10 @@ public class Write_Empleoyee extends Write_csv {
             System.out.println("El fichero no existe");
         }
         BufferedWriter flujoSalida = new BufferedWriter(new FileWriter(miFichero));
-        for (int i = 0; i < empleoyee.size(); i++) {
-            flujoSalida.write(empleoyee.get(i).getNIF());
+        for (int i = 0; i < Read_Empleoyee.empleoyee.size(); i++) {
+            flujoSalida.write(Read_Empleoyee.empleoyee.get(i).getNIF());
             flujoSalida.write(";");
-            flujoSalida.write(empleoyee.get(i).getNombre());
+            flujoSalida.write(Read_Empleoyee.empleoyee.get(i).getNombre());
             flujoSalida.write(";");
             flujoSalida.write(Read_Empleoyee.empleoyee.get(i).getApellido1());
             flujoSalida.write(";");

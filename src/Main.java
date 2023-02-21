@@ -14,8 +14,8 @@ public class Main {
         Read_Empleoyee employee = new Read_Empleoyee();
         Write_Empleoyee write = new Write_Empleoyee();
         Add_Employee add = new Add_Employee();
-        //employee.leer();
-        //hola.realizeInquirie();
+        employee.leer();
+        //hola.realizeInquirie()
         add.realizeAdd();
         write.guardar();
 
