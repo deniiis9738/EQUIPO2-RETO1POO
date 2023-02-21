@@ -22,7 +22,6 @@ public class InquirieEmployee extends Inquiries {
                 printeoConsultarEmpleados(employee1);
 
             }
-
         }
     }
 

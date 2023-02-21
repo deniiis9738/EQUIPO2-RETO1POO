@@ -1,6 +1,5 @@
-package PROYECTOANTIGUO;
-
-public class Empleoyee {
+package Contents;
+public class Employee {
 
     public int idDep;
     public String NIF;
@@ -13,8 +12,7 @@ public class Empleoyee {
     public String catGProfesional;
     public int gCotizacion;
     public String email;
-
-    public Empleoyee(String NIF, String nombre, String apellido1, String apellido2, String cuenta, String antiguedad, String nASeguridadSocial, String catGProfesional, int gCotizacion, String email, int idDep) {
+    public Employee(String NIF, String nombre, String apellido1, String apellido2, String cuenta, String antiguedad, String nASeguridadSocial, String catGProfesional, int gCotizacion, String email, int idDep) {
         this.idDep = idDep;
         this.NIF = NIF;
         this.nombre = nombre;
@@ -62,3 +60,4 @@ public class Empleoyee {
         return email;
     }
 }
+
