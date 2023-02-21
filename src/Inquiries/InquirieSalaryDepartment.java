@@ -3,6 +3,7 @@ package Inquiries;
 import Contents.Cotization;
 import Contents.Department;
 import Contents.Employee;
+import Documents.Read_Cotization;
 import Documents.Read_Department;
 import Documents.Read_Empleoyee;
 
@@ -23,8 +24,8 @@ public class InquirieSalaryDepartment extends Inquiries {
         }
     }
 
-    private static Salario getSalarioPorGradoCotizacion(int gCotizacion) {
-        for (Salario salario : salarios) {
+    private static Cotization getSalarioPorGradoCotizacion(int gCotizacion) {
+        for (Cotization salario : Read_Cotization.cotization) {
             if (salario.getGCot() == gCotizacion) {
                 return salario;
             }

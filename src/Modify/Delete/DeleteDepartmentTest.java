@@ -7,10 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class DeleteDepartmentTest {
 
     @Test
-    void realizeDelete() {
-    }
+    void borrarDepartamento() throws IOException {
 
-    @Test
-    void borrarDepartamento() {
+
+
     }
 }

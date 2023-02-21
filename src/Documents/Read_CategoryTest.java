@@ -1,12 +1,13 @@
 package Documents;
 
+import Contents.Category;
 import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class Read_CategoryTest {
-
-    Read_Category readCategory = new Read_Category();
 
     @Test
     void leer() {
