@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class InquirieCountEmployee_DepartmentTest {
+class
+InquirieCountEmployee_DepartmentTest {
 
     @Test
     void realizeInquirie() {
