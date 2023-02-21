@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Write_Category extends Write_csv{
-    public static ArrayList<Category> categories = new ArrayList<>();
 
     @Override
     public void guardar() throws IOException {
@@ -22,7 +21,7 @@ public class Write_Category extends Write_csv{
         String linea = flujoEntrada.readLine();
         while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
             String[] categoriaArray = linea.split(";");
-            categories.add(new Category(categoriaArray[0]));
+            Read_Category.categories.add(new Category(categoriaArray[0]));
             linea = flujoEntrada.readLine();
         }
 

@@ -10,8 +10,6 @@ import java.util.ArrayList;
 
 public class Write_Cotization extends Write_csv {
 
-    public static ArrayList<Cotization> cotization = new ArrayList<>();
-
     @Override
     public  void guardar() throws IOException {
 
@@ -24,7 +22,7 @@ public class Write_Cotization extends Write_csv {
         String linea = flujoEntrada.readLine();
         while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
             String[] salarioArray = linea.split(";");
-            cotization.add(new Cotization(Integer.parseInt(salarioArray[0]), Integer.parseInt(salarioArray[1])));
+            Read_Cotization.cotization.add(new Cotization(Integer.parseInt(salarioArray[0]), Integer.parseInt(salarioArray[1])));
             linea = flujoEntrada.readLine();
         }
 

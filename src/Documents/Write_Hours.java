@@ -10,8 +10,6 @@ import java.util.ArrayList;
 
 public class Write_Hours extends Write_csv{
 
-    public static ArrayList<Hours> hours = new ArrayList<>();
-
     @Override
     public  void guardar() throws IOException {
 
@@ -24,7 +22,7 @@ public class Write_Hours extends Write_csv{
         String linea = flujoEntrada.readLine();
         while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
             String[] horasArray = linea.split(";");
-            hours.add(new Hours(horasArray[0], horasArray[1], Integer.parseInt(horasArray[2])));
+            Read_Hours.hours.add(new Hours(horasArray[0], horasArray[1], Integer.parseInt(horasArray[2])));
             linea = flujoEntrada.readLine();
         }
 
