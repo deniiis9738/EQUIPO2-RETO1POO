@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class DeleteCategory extends Delete {
+    public static Scanner inputValue = new Scanner(System.in);
 
     Write_Category writeCategory = new Write_Category();
     Write_Empleoyee writeEmpleoyee = new Write_Empleoyee();
@@ -24,7 +25,6 @@ public class DeleteCategory extends Delete {
     }
 
     public void borrarCategoriaProfesional() throws IOException {
-        Scanner inputValue = new Scanner(System.in);
         Category category2 = null;
         boolean tiene = true;
         boolean existe = false;

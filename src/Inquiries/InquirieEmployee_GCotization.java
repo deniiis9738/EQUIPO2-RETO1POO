@@ -5,6 +5,9 @@ import Contents.Employee;
 import Documents.Read_Cotization;
 import Documents.Read_Empleoyee;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class InquirieEmployee_GCotization extends Inquiries {
 
     @Override

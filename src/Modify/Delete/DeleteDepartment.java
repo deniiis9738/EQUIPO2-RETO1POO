@@ -40,7 +40,7 @@ public class DeleteDepartment extends Delete {
             }catch (NumberFormatException e) {
                 System.out.print("El departamento introducido no es válido, por favor introdúcelo de nuevo");
             }
-        }//Como funcione me puedes ir cominedo los huevos , paso . NO LO HA BORRADO XD pq no has cerrado programa , vaya mierda ( carita triste jajajajajaajaj)
+        }
         for (Department departamentos1 : Read_Department.departments) {
             if (departamentos1.getIdDep() == eleccion) {
                 existe = true;
