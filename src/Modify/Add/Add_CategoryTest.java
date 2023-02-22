@@ -12,7 +12,6 @@ class Add_CategoryTest {
     @Test
     void newProfesionalCategory() throws IOException {
 
-        Add_Category addCategory = new Add_Category();
         Read_Category category = new Read_Category();
         category.leer();
         String id = "1234";

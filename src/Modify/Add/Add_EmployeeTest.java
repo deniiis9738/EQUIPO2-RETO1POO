@@ -14,10 +14,7 @@ class Add_EmployeeTest {
     @Test
     void incorporarEmpleados() {
 
-        Add_Employee addEmployee = new Add_Employee();
         Read_Empleoyee empleoyee = new Read_Empleoyee();
-        Employee employee1 = new Employee("1234-A","Juan", "Perez", "Calle 1",
-                "123456789", "3","3","3",3,"P",3);
 
         try {
             empleoyee.leer();

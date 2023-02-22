@@ -23,7 +23,6 @@ public class DeleteCategory extends Delete {
 
     }
 
-
     public void borrarCategoriaProfesional() throws IOException {
         Scanner inputValue = new Scanner(System.in);
         Category category2 = null;

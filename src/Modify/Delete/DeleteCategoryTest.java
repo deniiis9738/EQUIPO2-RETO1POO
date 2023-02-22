@@ -18,8 +18,12 @@ class DeleteCategoryTest{
     @Test
     void borrarCategoriaProfesional() throws IOException {
         String id = "A3";
-        Category category1 = new Category(id);
-        Read_Category.categories.remove(category1);
+        for (Category category1 : Read_Category.categories) {
+            if (category1.getCategoria().equals(id)) {
+                Read_Category.categories.remove(category1);
+                break;
+            }
+        }
         assertEquals(8, Read_Category.categories.size());
     }
 }
