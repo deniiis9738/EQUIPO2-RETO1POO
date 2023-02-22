@@ -1,11 +1,14 @@
 package Modify.Add;
 
 import Contents.Category;
+import static Documents.Read_Category.categories;
+
 import Documents.Read_Category;
 import Documents.Write_Category;
 
 import java.io.IOException;
 import java.util.Scanner;
+
 
 public class Add_Category extends Add {
 
@@ -22,13 +25,10 @@ public class Add_Category extends Add {
 
     public void newProfesionalCategory() throws IOException {
 
+
         Scanner inputValue = new Scanner(System.in);
         System.out.print("Introduce el id de la nueva categoria: ");
         String id = inputValue.next();
-
-        Category category1 = new Category(id);
-
-        Read_Category.categories.add(category1);
         System.out.println("Categoria añadida correctamente");
         System.out.println();
         System.out.println("Las categorias actuales son las siguientes: ");

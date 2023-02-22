@@ -1,15 +1,15 @@
 package Contents;
 
 public class Category {
-    public String categoria;
+    public String categories;
 
-    public Category(String categoria) {
-        this.categoria = categoria;
+    public Category(String categories) {
+        this.categories = categories;
 
     }
 
     public String getCategoria() {
-        return categoria;
+        return categories;
     }
 
 

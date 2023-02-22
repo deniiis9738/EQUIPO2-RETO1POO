@@ -25,10 +25,8 @@ public class Write_Category extends Write_csv{
             linea = flujoEntrada.readLine();
         }
 
-
+        flujoSalida.close();
 
     }
-
-
 
 }
