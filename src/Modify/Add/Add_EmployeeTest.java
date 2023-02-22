@@ -21,9 +21,11 @@ class Add_EmployeeTest {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        for (Employee employee : Read_Empleoyee.empleoyee) {
-            System.out.printf(employee.getNIF(), employee.getNombre());
-            System.out.println();
-              }
-}
+
+        Employee employee1 = new Employee("1234-A", "Juan", "Perez", "Calle 1",
+                "123456789", "3", "3", "3", 3, "P", 3);
+
+        Read_Empleoyee.empleoyee.add(employee1);
+        assertEquals(30, Read_Empleoyee.empleoyee.size());
     }
+}

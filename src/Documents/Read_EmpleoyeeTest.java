@@ -24,4 +24,3 @@ class Read_EmpleoyeeTest {
             assertEquals(29, Read_Empleoyee.empleoyee.size());
         }
     }
-}
