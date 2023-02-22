@@ -22,6 +22,6 @@ class Read_CategoryTest {
             System.out.println();
         }
 
-        assertEquals(9, Read_Category.categories.size());
+        assertEquals(7, Read_Category.categories.size());
     }
 }

@@ -1,6 +1,6 @@
 package Documents;
 
-import Contents.Department;
+import Contents.Hours;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -11,17 +11,17 @@ class Read_DepartmentTest {
 
     @Test
     void leer() {
-        Read_Department readDepartment = new Read_Department();
+        Read_Hours read_hours = new Read_Hours();
         try {
             readDepartment.leer();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        for (Department department : Read_Department.departments) {
-            System.out.printf(department.getNombreDep());
+        for (Hours hours : Read_Hours.hours) {
+            System.out.printf(hours.getNIF());
             System.out.println();
         }
 
-        assertEquals(4, Read_Department.departments.size());
+        assertEquals(4, Read_Hours.hours.size());
     }
 }
