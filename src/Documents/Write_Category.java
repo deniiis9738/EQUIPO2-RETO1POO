@@ -2,10 +2,7 @@ package Documents;
 
 import Contents.Category;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Write_Category extends Write_csv{
@@ -17,12 +14,11 @@ public class Write_Category extends Write_csv{
         if (!miFichero.exists()) {
             System.out.println("El fichero no existe");
         }
-        BufferedReader flujoEntrada = new BufferedReader(new FileReader(miFichero));
-        String linea = flujoEntrada.readLine();
-        while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
-            String[] categoriaArray = linea.split(";");
-            Read_Category.categories.add(new Category(categoriaArray[0]));
-            linea = flujoEntrada.readLine();
+
+        BufferedWriter flujoSalida = new BufferedWriter(new FileWriter(miFichero));
+        for (int i = 0; i < Read_Category.categories.size(); i++) {
+            flujoSalida.write(Read_Category.categories.get(i).getCategoria());
+            flujoSalida.write("\n");
         }
 
         flujoSalida.close();

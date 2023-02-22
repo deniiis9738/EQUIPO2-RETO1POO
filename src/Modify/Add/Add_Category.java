@@ -31,7 +31,8 @@ public class Add_Category extends Add {
         String id = inputValue.next();
         System.out.println("Categoria añadida correctamente");
         System.out.println();
-        System.out.println("Las categorias actuales son las siguientes: ");
+        Category category1 = new Category(id);
+        categories.add(category1);
         writeCategory.save();
     }
 
