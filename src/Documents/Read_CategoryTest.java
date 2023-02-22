@@ -13,7 +13,7 @@ class Read_CategoryTest {
     void leer() {
         Read_Category readCategory = new Read_Category();
         try {
-            readCategory.leer();
+            readCategory.read();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

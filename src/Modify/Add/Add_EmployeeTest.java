@@ -1,8 +1,6 @@
 package Modify.Add;
 
-import Contents.Category;
 import Contents.Employee;
-import Documents.Read_Category;
 import Documents.Read_Empleoyee;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +15,7 @@ class Add_EmployeeTest {
         Read_Empleoyee empleoyee = new Read_Empleoyee();
 
         try {
-            empleoyee.leer();
+            empleoyee.read();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

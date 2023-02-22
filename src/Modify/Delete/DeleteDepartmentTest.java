@@ -1,9 +1,7 @@
 package Modify.Delete;
 
-import Contents.Category;
 import Contents.Department;
-import Documents.Read_Category;
-import Modify.Add.Add_Category;
+import Documents.Read_Department;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -16,10 +14,17 @@ class DeleteDepartmentTest {
 
     @Test
     void borrarDepartamento() throws IOException {
-        String id = "A3";
-        int idDep = 1;
-        Department department1 = new Department(1,id);
-        Read_Category.categories.remove(department1);
-        assertEquals(3, Read_Category.categories.size());
+
+        Read_Department read_department = new Read_Department();
+        read_department.read();
+        String id = "Informatica";
+        for (Department department1 : Read_Department.departments) {
+            if (department1.getNombreDep().equals(id)) {
+                Read_Department.departments.remove(department1);
+                break;
+            }
+        }
+        assertEquals(3, Read_Department.departments.size());
+
     }
 }

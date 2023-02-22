@@ -19,7 +19,7 @@ public class Read_Department extends Read_csv{
     public static ArrayList<Department> departments = new ArrayList<>();
 
     @Override
-    public void leer() throws IOException {
+    public void read() throws IOException {
 
         miFichero = new File("./src/Csv/Departamentos.csv");
         if (!miFichero.exists()) {

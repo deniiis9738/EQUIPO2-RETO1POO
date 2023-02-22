@@ -76,8 +76,8 @@ public class DeleteCategory extends Delete {
                 System.out.println("Categoría borrada correctamente");
             }
 
-            writeCategory.guardar();
-            writeEmpleoyee.guardar();
+            writeCategory.save();
+            writeEmpleoyee.save();
 
         }else {
             System.out.println("La categoría introducida no existe");

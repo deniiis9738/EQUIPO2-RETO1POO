@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Write_Category extends Write_csv{
 
     @Override
-    public void guardar() throws IOException {
+    public void save() throws IOException {
 
         miFichero = new File("./src/Csv/CategoriasProfesionales.csv");
         if (!miFichero.exists()) {

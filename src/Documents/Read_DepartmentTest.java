@@ -13,7 +13,7 @@ class Read_DepartmentTest {
     void leer() {
         Read_Hours read_hours = new Read_Hours();
         try {
-            readDepartment.leer();
+            read_hours.read();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

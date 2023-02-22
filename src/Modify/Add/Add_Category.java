@@ -3,11 +3,7 @@ package Modify.Add;
 import Contents.Category;
 import Documents.Read_Category;
 import Documents.Write_Category;
-import Documents.Write_Department;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -36,7 +32,7 @@ public class Add_Category extends Add {
         System.out.println("Categoria añadida correctamente");
         System.out.println();
         System.out.println("Las categorias actuales son las siguientes: ");
-        writeCategory.guardar();
+        writeCategory.save();
     }
 
 }

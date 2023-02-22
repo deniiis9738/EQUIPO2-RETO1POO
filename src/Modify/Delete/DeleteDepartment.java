@@ -97,8 +97,8 @@ public class DeleteDepartment extends Delete {
                 System.out.println("Departamento borrado correctamente");
             }
 
-            writeDepartment.guardar();
-            writeEmpleoyee.guardar();
+            writeDepartment.save();
+            writeEmpleoyee.save();
 
         }else {
             System.out.println("El departamento introducido no existe");

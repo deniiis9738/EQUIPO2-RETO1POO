@@ -13,7 +13,7 @@ public class Read_Cotization extends Read_csv{
 
 
     @Override
-    public void leer() throws IOException {
+    public void read() throws IOException {
         miFichero = new File("./src/Csv/Cotizacion.csv");
         if (!miFichero.exists()) {
             System.out.println("El fichero no existe");

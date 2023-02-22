@@ -13,7 +13,7 @@ public class Read_Hours extends Read_csv{
     public static ArrayList<Hours> hours = new ArrayList<>();
     @Override
 
-    public void leer() throws IOException {
+    public void read() throws IOException {
         miFichero = new File("./src/Csv/Horas.csv");
         if (!miFichero.exists()) {
             System.out.println("El fichero no existe");

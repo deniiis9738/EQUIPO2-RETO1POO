@@ -47,7 +47,7 @@ public class Add_Employee extends Add {
 
         Employee empleoyee1 = new Employee(NIF, nombreEmpleado, apellido1Empleado, apellido2Empleado, cuentaEmpleado, antiguedad, nSS, catProf, GCot, email, idDep);
         empleoyee.add(empleoyee1);
-        writeEmpleoyee.guardar();
+        writeEmpleoyee.save();
     }
 
 }

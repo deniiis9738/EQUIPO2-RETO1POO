@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class
 InquirieCountEmployee_DepartmentTest {
 
@@ -17,12 +15,12 @@ InquirieCountEmployee_DepartmentTest {
         Read_Empleoyee empleoyee = new Read_Empleoyee();
         InquirieCountEmployee_Department inquirieCountEmployeeDepartment = new InquirieCountEmployee_Department();
         try {
-            department.leer();
+            department.read();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         try {
-            empleoyee.leer();
+            empleoyee.read();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Write_Department extends Write_csv {
 
     @Override
-    public  void guardar() throws IOException {
+    public  void save() throws IOException {
 
         //Funcion para guardar los datos en el archivo csv
 

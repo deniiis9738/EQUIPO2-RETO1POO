@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Write_Cotization extends Write_csv {
 
     @Override
-    public  void guardar() throws IOException {
+    public  void save() throws IOException {
 
 
         miFichero = new File("./src/Csv/Cotizacion.csv");

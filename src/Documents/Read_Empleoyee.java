@@ -12,7 +12,7 @@ public class Read_Empleoyee extends Read_csv{
 
     public static ArrayList<Employee> empleoyee = new ArrayList<>();
     @Override
-    public void leer() throws IOException {
+    public void read() throws IOException {
         miFichero = new File("./src/Csv/Empleados.csv");
         if (!miFichero.exists()) {
             System.out.println("El fichero no existe");

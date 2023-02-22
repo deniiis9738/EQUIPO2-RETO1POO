@@ -9,7 +9,7 @@ public class Write_Empleoyee extends Write_csv {
 
 
     @Override
-    public void guardar() throws IOException {
+    public void save() throws IOException {
         //Funcion para guardar los datos en el archivo csv
 
         miFichero = new File("./src/Csv/Empleados.csv");

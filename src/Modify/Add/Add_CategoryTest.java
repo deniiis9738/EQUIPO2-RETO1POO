@@ -13,7 +13,7 @@ class Add_CategoryTest {
     void newProfesionalCategory() throws IOException {
 
         Read_Category category = new Read_Category();
-        category.leer();
+        category.read();
         String id = "1234";
         Category category1 = new Category(id);
         Read_Category.categories.add(category1);
