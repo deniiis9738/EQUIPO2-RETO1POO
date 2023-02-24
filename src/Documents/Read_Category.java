@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class Read_Category extends Read_csv{
     public static ArrayList<Category> categories = new ArrayList<>();
 
+
     @Override
     public  void read() throws IOException {
 

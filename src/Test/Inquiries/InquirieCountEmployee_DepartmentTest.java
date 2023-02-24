@@ -6,10 +6,13 @@ import Inquiries.InquirieCountEmployee_Department;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-
+import java.io.*;
 class
 InquirieCountEmployee_DepartmentTest {
-
+    /**
+     * @author Eduard
+     * Test para probar InquirieCountEmployee
+     */
     @Test
     void realizeInquirie() {
         Read_Department department = new Read_Department();
