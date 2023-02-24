@@ -30,7 +30,7 @@ class InquirieEmployee_GCotizationTest {
     @Test
     void realizeInquirie() {
 
-        /*Read_Department department = new Read_Department();
+        Read_Department department = new Read_Department();
         Read_Empleoyee empleoyee = new Read_Empleoyee();
         InquirieEmployee_GCotization inquirieEmployeeGCotization = new InquirieEmployee_GCotization();
         try {
@@ -43,7 +43,7 @@ class InquirieEmployee_GCotizationTest {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        inquirieEmployeeGCotization.realizeInquirie();*/
+        inquirieEmployeeGCotization.realizeInquirie();
 
     }
     public static Scanner setinputValue = new Scanner(System.in);
