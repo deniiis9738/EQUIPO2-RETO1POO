@@ -8,7 +8,7 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 /**
- * @author Iker Rodriguez Montava
+ * @author Eduard
  * @version v2
  * @throws IOException
  * Esta clase nos sirve para testear el funcionamiento de la clase Categoria
