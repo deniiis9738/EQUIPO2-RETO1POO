@@ -6,7 +6,12 @@ import Documents.Read_Empleoyee;
 
 import java.io.IOException;
 import java.util.Scanner;
-
+/**
+ * @author Iker Rodriguez Montava
+ * @version v2
+ * @throws IOException
+ * Esta clase elimina una categoria que le pasa el usuario
+ */
 public class DeleteCategory extends Delete {
     public static Scanner inputValue = new Scanner(System.in);
 

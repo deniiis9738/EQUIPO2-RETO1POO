@@ -7,6 +7,13 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+/**
+ * @author Iker Rodriguez Montava
+ * @version v2
+ * @throws IOException
+ * Esta clase guarda las horas de cada trabajador
+ */
+
 
 public class Write_Hours extends Write_csv{
 

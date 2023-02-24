@@ -8,6 +8,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * @author Iker Rodriguez Montava
+ * @version v2
+ * @throws IOException
+ * Esta clase guarda el grupo de cotizacion
+ * */
+
 public class Write_Cotization extends Write_csv {
 
     @Override

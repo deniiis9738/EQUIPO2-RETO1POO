@@ -26,7 +26,7 @@ public class Read_Category extends Read_csv{
         }
         BufferedReader flujoEntrada = new BufferedReader(new FileReader(miFichero));
         String linea = flujoEntrada.readLine();
-        while (linea != null) { // Va leyendo lineas y mientras no llegue al final nos va mostrando su contenido
+        while (linea != null) { // Va leyendo linias y mientras no llegue al final nos va mostrando su contenido
             String[] categoriaArray = linea.split(";");
             categories.add(new Category(categoriaArray[0]));
             linea = flujoEntrada.readLine();

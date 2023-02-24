@@ -5,6 +5,13 @@ import Contents.Category;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * @author Iker Rodriguez Montava
+ * @version v2
+ * @throws IOException
+ * Esta clase guarda las categorias
+ */
+
 public class Write_Category extends Write_csv{
 
 

@@ -8,6 +8,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * @author Iker Rodriguez Montava
+ * @version v2
+ * @throws IOException
+ * Esta clase guarda los departamentos
+ */
+
 public class Write_Department extends Write_csv {
 
     @Override

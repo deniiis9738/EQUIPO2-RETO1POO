@@ -6,6 +6,12 @@ import Documents.*;
 
 import java.io.IOException;
 import java.util.Scanner;
+/**
+ * @author Iker Rodriguez Montava
+ * @version v2
+ * @throws IOException
+ * Esta clase elimina un departamento que le pasa un usuario
+ */
 
 public class DeleteDepartment extends Delete {
 
