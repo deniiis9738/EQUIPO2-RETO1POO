@@ -10,7 +10,10 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class InquirieEmployee_idDepartmentTest {
-
+    /**
+     * @author Eduard
+     * Test para probar InquirieEmployee_idDepartment
+     */
     @Test
     void realizeInquirie() {
         Read_Department department = new Read_Department();

@@ -14,7 +14,7 @@ InquirieCountEmployee_DepartmentTest {
      * Test para probar InquirieCountEmployee
      */
     @Test
-    void realizeInquirie() {
+    void realizeInquirie(){
         Read_Department department = new Read_Department();
         Read_Empleoyee empleoyee = new Read_Empleoyee();
         InquirieCountEmployee_Department inquirieCountEmployeeDepartment = new InquirieCountEmployee_Department();

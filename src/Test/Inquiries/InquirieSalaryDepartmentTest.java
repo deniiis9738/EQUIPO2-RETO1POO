@@ -1,9 +1,17 @@
 package Test.Inquiries;
 
+import Documents.Read_Department;
+import Inquiries.InquirieHoursDepartment;
+import Inquiries.InquirieSalaryDepartment;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.io.IOException;
 
+import static org.junit.jupiter.api.Assertions.*;
+/**
+ * @author Eduard
+ * Test para probar InquirieSalaryDepartment
+ */
 class InquirieSalaryDepartmentTest {
 
     @Test
