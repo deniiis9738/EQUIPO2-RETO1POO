@@ -6,6 +6,11 @@ import Documents.Write_Empleoyee;
 
 import java.util.Scanner;
 
+/**
+ * @author Carlos Hernandez Garcia
+ * @version V2
+ * Esta clase modifica los datos personales de un empleado
+ */
 public class Update_employee_personal_data extends Update {
 
     Write_Empleoyee writeEmpleoyee = new Write_Empleoyee();
@@ -21,12 +26,20 @@ public class Update_employee_personal_data extends Update {
     public static String id;
     public static int identificador;
 
+    /**
+     * Se pregunta al usuario por el NIF del empleado a modificar
+     */
+
     private static String askEmployee() {
         Scanner inputValue = new Scanner(System.in);
         System.out.print("Introduce el NIF del empleado a modificar: ");
         id = inputValue.next();
         return id;
     }
+
+    /**
+     * Se muestra el empleado
+     */
 
     private static void showEmployeeData(Employee employee1) {
         System.out.printf("%-15s%-15s%-15s%-15s%-15s%-15s%-10s%-28s%-25s%-20s%-15s\n",
@@ -60,6 +73,10 @@ public class Update_employee_personal_data extends Update {
         System.out.println();
     }
 
+    /**
+     * Se pregunta al usuario que datos desea modificar
+     */
+
     private static int askModifyData(Employee employee1) {
         Scanner inputValue = new Scanner(System.in);
         System.out.println("Que datos deseas modificar?");
@@ -77,6 +94,10 @@ public class Update_employee_personal_data extends Update {
         identificador = inputValue.nextInt();
         return identificador;
     }
+
+    /**
+     * Se modifica el empleado
+     */
 
     public static void modifyEmployee() {
         Scanner inputValue = new Scanner(System.in);

@@ -8,6 +8,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * @author Carlos Hernandez Garcia
+ * @version V2
+ * Esta clase lee el fichero Empleados.csv y lo guarda en un ArrayList
+ */
 public class Read_Empleoyee extends Read_csv{
 
     public static ArrayList<Employee> empleoyee = new ArrayList<>();

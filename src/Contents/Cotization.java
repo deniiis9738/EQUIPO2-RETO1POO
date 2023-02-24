@@ -1,5 +1,10 @@
 package Contents;
 
+/**
+ * @author Carlos , Denis e Iker
+ * @version V2
+ */
+
 public class Cotization {
     public int gCot;
     public int dinero;

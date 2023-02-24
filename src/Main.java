@@ -10,9 +10,12 @@ import Modify.Update.Update_employee_personal_data;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * @author Carlos, Denis e Iker
+ * @version V2
+ * Esta clase permite al usuario elegir entre las distintas opciones que ofrece el programa
+ */
 public class Main {
-
-
     public static final int CERRAR_PROGRAMA = 0;
     public static final int EXPORTAR_CSV = 1;
     public static final int CONSULTAR = 2;

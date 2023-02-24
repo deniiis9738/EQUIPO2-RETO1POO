@@ -8,6 +8,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * @author Carlos Hernandez Garcia
+ * @version V2
+ * Esta clase lee el fichero Horas.csv y lo guarda en un ArrayList
+ */
 public class Read_Hours extends Read_csv{
 
     public static ArrayList<Hours> hours = new ArrayList<>();

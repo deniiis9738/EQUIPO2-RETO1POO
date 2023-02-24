@@ -7,6 +7,11 @@ import java.util.Scanner;
 
 import static Documents.Read_Empleoyee.empleoyee;
 
+/**
+ * @author Carlos Hernandez Garcia
+ * @version V2
+ * Esta clase añade un nuevo empleado a la lista de empleados
+ */
 public class Add_Employee extends Add {
 
     Write_Empleoyee writeEmpleoyee = new Write_Empleoyee();

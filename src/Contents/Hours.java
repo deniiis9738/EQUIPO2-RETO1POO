@@ -1,5 +1,10 @@
 package Contents;
 
+/**
+ * @author Carlos , Denis e Iker
+ * @version V2
+ */
+
 public class Hours {
 
     public String NIF;

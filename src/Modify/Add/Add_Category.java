@@ -10,6 +10,11 @@ import java.io.IOException;
 import java.util.Scanner;
 
 
+/**
+ * @author Carlos Hernandez Garcia
+ * @version V2
+ * Esta clase añade una nueva categoria a la lista de categorias
+ */
 public class Add_Category extends Add {
 
     Write_Category writeCategory = new Write_Category();

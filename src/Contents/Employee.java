@@ -1,4 +1,9 @@
 package Contents;
+
+/**
+ * @author Carlos , Denis e Iker
+ * @version V2
+ */
 public class Employee {
 
     public int idDep;

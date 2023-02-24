@@ -8,6 +8,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * @author Carlos Hernandez Garcia
+ * @version V2
+ * Esta clase lee el fichero CategoriasProfesionales.csv y lo guarda en un ArrayList
+ */
 public class Read_Category extends Read_csv{
     public static ArrayList<Category> categories = new ArrayList<>();
 
