@@ -4,6 +4,12 @@ import Contents.Employee;
 
 import java.io.*;
 import java.util.ArrayList;
+/**
+ * @author Iker Rodriguez Montava
+ * @version v2
+ * @throws IOException
+ * Esta clase guarda los empleados
+ */
 
 public class Write_Empleoyee extends Write_csv {
 

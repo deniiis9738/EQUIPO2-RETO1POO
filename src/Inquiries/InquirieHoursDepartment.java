@@ -7,6 +7,11 @@ import Documents.Read_Hours;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author Denis Andres Ion Badea
+ * @version v2
+ * Función que consulta las horas que se ha trabajado en determinado departamento
+ */
 public class InquirieHoursDepartment extends Inquiries {
     private Scanner inputValue = new Scanner(System.in);
     private ArrayList<Employee> auxE = new ArrayList<>();

@@ -11,6 +11,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Scanner;
 
+/**
+ * @author Denis Andres Ion Badea
+ * @version v2
+ * Función que consulta el salario de un grupo de cotización
+ */
 public class InquirieSalary_GCotization extends Inquiries {
 
     private static Scanner inputValue = new Scanner(System.in);

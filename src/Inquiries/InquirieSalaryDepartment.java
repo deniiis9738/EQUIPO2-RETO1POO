@@ -7,6 +7,11 @@ import Documents.Read_Cotization;
 import Documents.Read_Department;
 import Documents.Read_Empleoyee;
 
+/**
+ * @author Denis Andres Ion Badea
+ * @version v2
+ * Función que consulta el salario de un departamento entero
+ */
 public class InquirieSalaryDepartment extends Inquiries {
     @Override
     public void realizeInquirie() {

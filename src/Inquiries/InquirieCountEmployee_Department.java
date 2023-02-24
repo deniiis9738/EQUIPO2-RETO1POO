@@ -5,6 +5,12 @@ import Contents.Employee;
 import Documents.Read_Department;
 import Documents.Read_Empleoyee;
 
+/**
+ * @author Denis Andres Ion Badea
+ * @version v2
+ * Función que consulta cantidad de empleados por cada departamento
+ */
+
 public class InquirieCountEmployee_Department extends Inquiries {
     @Override
     public void realizeInquirie() {

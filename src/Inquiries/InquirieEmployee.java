@@ -6,8 +6,13 @@ import Documents.Read_Empleoyee;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author Denis Andres Ion Badea
+ * @version v2
+ * Función que consulta un empleado específico
+ */
 public class InquirieEmployee extends Inquiries {
-    private String id;
+    public String id;
     private Scanner inputValue = new Scanner(System.in);
 
     public ArrayList<Contents.Employee> empleoyee = new ArrayList<>();

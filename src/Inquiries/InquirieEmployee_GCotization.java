@@ -8,6 +8,11 @@ import Documents.Read_Empleoyee;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * @author Denis Andres Ion Badea
+ * @version v2
+ * Función que consulta empleados por grupo de cotización
+ */
 public class InquirieEmployee_GCotization extends Inquiries {
 
     private static int identificador;

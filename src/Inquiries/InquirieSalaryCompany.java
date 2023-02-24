@@ -5,6 +5,11 @@ import Contents.Employee;
 import Documents.Read_Cotization;
 import Documents.Read_Empleoyee;
 
+/**
+ * @author Denis Andres Ion Badea
+ * @version v2
+ * Función que consulta el salario de la empresa entera
+ */
 public class InquirieSalaryCompany extends Inquiries {
 
     private static int[] cantECod = new int[7];

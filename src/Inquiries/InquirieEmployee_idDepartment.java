@@ -7,6 +7,11 @@ import Documents.Read_Empleoyee;
 
 import java.util.Scanner;
 
+/**
+ * @author Denis Andres Ion Badea
+ * @version v2
+ * Función que consulta empleados por el id del departamento
+ */
 public class InquirieEmployee_idDepartment extends Inquiries{
 
     private int identificador;
